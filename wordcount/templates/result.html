@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body class="text-center">
+    <div class="container"> 
+        <br>  
+        <h1><strong>result</strong></h1>
+        
+        <hr class="my-4">
+            <h3>당신이 입력한 텍스트는 <strong>{{total}}</strong> 로 구성되어있습니다.</h3>
+       
+
+        <br>
+        <br>       
+        <h3> 입력한 텍스트 : </h3>
+        <h4>{{full}}</h4>
+        <br>
+        <br>
+        <h3>단어 카운트  : </h3>
+        <h5>
+        {% for word, howmany in dictionary%}
+        {{word}} : {{howmany}}
+        <br>
+        <br>
+        {%endfor%}</h5>
+        <hr class="my-4">
+        <br>
+        <a href ="{% url 'home' %}"> 
+           <div class="alert-dark" role="alert">
+               <h5> reset </h5>
+           </div>
+        </a>
+    </div>
+
+ </body>
